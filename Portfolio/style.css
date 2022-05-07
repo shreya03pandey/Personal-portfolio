@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+}
+.navbar
+{
+    position:fixed;
+    width:100%;
+    background:grey;
+    z-index:999;
+    border: 1.5px solid darkorange;
+    font-family: 'ubuntu',sans-serif;
+    padding:20px 0;
+    transition:color 0.3s ease;
+}
+.navbar .logo{
+    font-family: 'Kaushan Script', cursive;
+}
+.navbar .logo a{
+    font-size:35px;
+    font-weight:600;
+    color:whitesmoke;
+    
+}
+.navbar .logo a span{
+    color:darkorange;
+}
+.max-width{
+    max-width:1300px;
+    padding:0 80px;
+    margin:auto;
+}
+.navbar .max-width{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .menu li{
+   display: inline-block;
+    list-style:none;
+}
+.navbar .menu li a:hover{
+    color:darkorange;
+    font-size:26px;
+}
+.navbar.sticky
+{
+    padding:13px 0;
+    background-color:darkorange;
+    border:2px solid grey;  
+}
+.navbar.sticky .menu li a:hover
+{
+    color:grey;
+}
+.navbar.sticky .logo a span{
+    color:black;
+}
+.navbar .menu li a{
+ color:black;
+ font-size:20px;
+ font-weight:500;
+  margin-left: 25px;
+  transition:color 0.3s ease;
+} 
+.menu-btn
+{
+    cursor:pointer;
+    color:black;
+    font-size:23px;
+    z-index:999;
+    /* pointer-events: auto;
+    cursor:hand; */
+    display: none;
+}
+.home
+{
+    display:flex;
+    background-image: url("https://img.freepik.com/free-vector/gradient-black-background-with-wavy-lines_23-2149161864.jpg?size=626&ext=jpg&ga=GA1.1.1788065691.1647361100") !important;
+   background-repeat: no-repeat;
+   background-size:cover;
+    height:100vh;
+    color:azure;
+    min-height: 500px;
+}
+.home .max-width{
+    margin:auto 0 auto 50px;
+}
+.home .home-content .text-1
+{
+    font-size:27px;
+}
+.home .home-content .text-2
+{
+    font-size:80px;
+    font-weight: 400;
+    margin-left: -3px;
+    font-family: 'Kaushan Script', cursive; 
+}
+.home .home-content .text-3
+{
+    font-size:60px;
+    margin-left: 5px 0;
+}
+.home .home-content .text-3 span{
+    color:grey;
+    font-weight: 500;
+    
+}
+@media (max-width:1106px){
+.home .max-width{
+    margin-left:0px;
+}
+
+}
+@media (max-width:690px){
+    .max-width{
+        padding:0 23px;
+    } 
+    .home .home-content .text-2
+    {
+        font-size:60px;
+        
+    }
+    .home .home-content .text-3
+    {
+        font-size:30px;
+       
+    }
+    .skills .skills-content .column
+    {
+        width:100%;
+    }
+}
+@media (max-width:950px)
+{
+
+    .max-width{
+        padding:0 50px;
+    }
+    .menu-btn
+    {
+    display: block;
+    
+    }
+    .menu-btn i.active:before{
+        content:"\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width:100%;
+        left:-100%;
+        top:0;
+        text-align: center;
+        padding-top: 80px;
+        transition:all 0.3s ease;
+        background-color: lightgray;
+        
+    }
+    .navbar .menu.active
+    {
+        left:0;
+    }
+    .navbar .menu li{
+        display:block;
+    }
+    .navbar .menu li a {
+        display:inline-block;
+        margin:20px 0;
+        font-size:25px;
+    }
+    .home .home-content .text-2
+    {
+        font-size:70px;
+        
+    }
+    .home .home-content .text-3
+    {
+        font-size:50px;
+       
+    }
+    .max-width{
+        max-width: 800px;
+    }
+    .about .about-content .column{
+        width:50%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin:0 auto 60px;
+    }
+    .about .about-content .right{
+        flex:100%;
+    }
+    .skills .skills-content .column
+    {
+      width:100%;
+      margin-bottom: 35px;
+    }
+}
+    @media (max-width:533px){
+        
+        .home .home-content .text-2
+        {
+            font-size:45px;
+            
+        }
+        .home .home-content .text-3
+        {
+            font-size:25px;
+           
+        }
+       
+        .skills .skills-content .column
+        {
+         width:100%;
+         }
+    }
+
+
+/* css in about */
+html{
+    scroll-behavior: smooth;
+}
+section{
+    padding:75px 0;
+}
+.about,.skills,.contact{
+    font-family: 'Poppins',sans-serif;
+}
+section .title{
+    position:relative;
+    text-align:center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 50px;
+    padding:20px;
+    font-family: 'Ubuntu',sans-serif;
+    
+}
+section .title::before{
+    content:"";
+    position:absolute;
+    bottom: 0px;;
+    left:50%;
+    width:220px;
+    height:3px;
+    background: darkorange;
+    transform: translateX(-50%);
+}
+section .title::after{
+    content:"who I am";
+    position:absolute;
+    bottom: -14px;;
+    font-size: 20px;
+    left:50%;
+    padding: 5px;
+    background: grey;
+    transform: translateX(-50%);
+}
+.about .about-content,.skills .skills-content,.contact .contact-content
+{
+    display:flex;
+    align-content:center;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+.about .about-content .left img{
+    height:350px;
+    width:350px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+.about .about-content .left{
+    width:45%;
+}
+.about .about-content .right{
+    width:55%;
+}
+.about .about-content .right .text{
+    font-size:25px;
+    font-weight:600;
+    margin-bottom: 10px;
+    margin-top:16px;
+}
+.about .about-content .right .text span{
+    color:darkorange;
+}
+.about .about-content .right p{
+    text-align:justify;
+}
+.about .about-content .right a{
+    display: inline-block;
+    background: grey;
+    color:darkorange;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 2px 10px;
+    margin-top: 25px;
+    border-radius: 6px;
+    border: 2px solid black;
+    transition: all 0.3s ease;
+}
+.about .about-content .right a:hover{
+    color:black;
+    background: darkorange;
+}
+.about .about-content .column{
+    width:50%;
+}
+.skills .title::after{
+    content:"what i know";
+
+}
+.skills{
+    background-color: grey;
+}
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+}
+.skills .skills-content .left .text{
+    font-size:25px;
+    font-weight:600;
+    margin-bottom: 10px;
+    color:black;
+    font-family: 'Kaushan Script', cursive;
+}
+.skills .skills-content .left p{
+    color:white;
+    text-align: justify;
+    font-family: 'Kaushan Script', cursive;
+}
+.skills .skills-content .right .bars{
+    margin-bottom:15px;
+}
+.skills .skills-content .right .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+.skills .skills-content .right span{
+    font-weight: 500;
+    font-size: 18px;
+}
+.skills .skills-content .right .line{
+    height: 5px;
+    width:100%;
+    background-color: black;
+    position:relative;
+}
+.skills .skills-content .right .line::before{
+    content: "";
+    position:absolute;
+    height: 100%;
+    width:80%;
+    left: 0;
+    top:0;
+    background-color: darkorange;
+}
+.skills .skills-content .right .html::before
+{
+    width: 80%;
+}
+.skills .skills-content .right .css::before
+{
+    width: 60%;
+}
+.skills .skills-content .right .js::before
+{
+    width: 60%;
+}
+.skills .skills-content .right .java::before
+{
+    width: 70%;
+}
+.skills .skills-content .right .rjs::before
+{
+    width: 60%;
+}
+.contact .title::after{
+    content:"get in touch";
+}
+.contact
+{
+    background-color: lightgray;
+}
+.contact .contact-content .column{
+    width:calc(50%-30px);
+}
+
+.contact .contact-content .left p{
+    text-align: justify;
+    font-weight: 500;
+}
+.contact .contact-content .left .icons
+{
+    margin: 10px 0;
+}
+.contact .contact-content .row
+{
+    display:flex;
+    height:65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: darkorange;
+}
+.contact .contact-content .info .head{
+    font-weight: 500;
+}
+.contact .contact-content .info .sub-title
+{
+    color:darkorange;
+}
+
+.contact .contact-content .center
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer{
+    background-color: black;
+    padding:20px 23px;
+    text-align: center;
+}
+footer a{
+    font-size: 25px;
+    color: white;
+
+}
+.foot a:hover{
+    color:darkorange;
+    text-decoration: underline;
+}
